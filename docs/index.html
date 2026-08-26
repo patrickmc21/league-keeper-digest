@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Keeper Digest</title>
+    <meta name="description" content="End-of-season rosters, keeper costs and remaining eligibility for our fantasy football league." />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <p class="eyebrow" id="league-name">Loading…</p>
+        <h1 id="headline">Keeper Digest</h1>
+        <p class="sub" id="subhead"></p>
+
+        <details class="rules">
+          <summary>League keeper rules</summary>
+          <ul>
+            <li>A keeper costs <strong>one round higher</strong> than where he was drafted last season — a Rd 9 pick costs your Rd 8 pick.</li>
+            <li>A player who <strong>wasn't drafted</strong> last season costs a <strong>16th-round</strong> pick.</li>
+            <li>A player can be kept for <strong>two seasons</strong>. The year you originally drafted him doesn't count.</li>
+            <li>If a keeper's cost would climb <strong>past Rd 1</strong>, he goes back into the draft pool.</li>
+            <li>Costs and eligibility follow the <strong>player</strong>, so a trade doesn't reset anything.</li>
+          </ul>
+        </details>
+      </div>
+    </header>
+
+    <div class="controls" id="controls" hidden>
+      <div class="wrap">
+        <div class="tabs" role="tablist" aria-label="View">
+          <button role="tab" class="tab" data-view="teams" aria-selected="true">Teams</button>
+          <button role="tab" class="tab" data-view="table" aria-selected="false">All players</button>
+        </div>
+        <div class="filters">
+          <label class="field search">
+            <span class="visually-hidden">Search players</span>
+            <input id="search" type="search" placeholder="Search a player…" autocomplete="off" />
+          </label>
+          <label class="field team-filter">
+            <span class="visually-hidden">Filter by team</span>
+            <select id="team-filter"></select>
+          </label>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="keepers-only" />
+          <span>Keepable only</span>
+        </label>
+      </div>
+    </div>
+
+    <main class="wrap" id="app">
+      <p class="status">Loading league data…</p>
+    </main>
+
+    <footer class="wrap site-footer">
+      <p id="generated"></p>
+      <p class="legend">
+        <span class="badge badge-final">Final year</span> last season you can keep him ·
+        <span class="badge badge-out">Ineligible</span> back in the draft pool ·
+        <span class="badge badge-warn">Cost clash</span> two keepers want the same round ·
+        <span class="badge badge-verify">Verify</span> draft history doesn't go back far enough
+      </p>
+    </footer>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

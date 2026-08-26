@@ -1,0 +1,16 @@
+{
+  "name": "league-keeper-digest",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fantasy football keeper quick-reference: end-of-season rosters, keeper costs and remaining eligibility, published to GitHub Pages.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch-league.mjs",
+    "sample": "node scripts/fetch-league.mjs --sample",
+    "preview": "node scripts/preview.mjs",
+    "test": "node --test \"scripts/*.test.mjs\""
+  }
+}

@@ -1,0 +1,9 @@
+# ESPN session cookies — live credentials, never commit
+config.local.json
+
+# Raw API dumps from --raw-dump (may contain league/member details)
+raw/
+*.raw.json
+
+node_modules/
+.DS_Store

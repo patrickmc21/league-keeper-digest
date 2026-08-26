@@ -1,0 +1,6 @@
+{
+  "_comment": "Copy this file to config.local.json and fill in your values. config.local.json is gitignored — never commit it, these cookies are live credentials for your ESPN account.",
+  "leagueId": 123456,
+  "espnS2": "PASTE_THE_espn_s2_COOKIE_HERE",
+  "swid": "{PASTE-THE-SWID-COOKIE-HERE}"
+}
